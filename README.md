@@ -1,6 +1,6 @@
 # Supplementary material description
 
-This page contain additional details about the experimental setup and results discussed in the paper *Data Pipeline Hyperparameter Optimization* submitted for the 21st International Workshop On Design, Optimization, Languages and Analytical Processing of Big Data [DOLAP 2019](http://www.cs.put.poznan.pl/events/DOLAP2019.html) collocated with [EDBT/ICDT](http://edbticdt2019.inesc-id.pt/?main) joint conference.
+This page contain additional details about the experimental setup and results discussed in the paper *Data Pipeline Hyperparameter Optimization* submitted for the 21st International Workshop On Design, Optimization, Languages and Analytical Processing of Big Data ([DOLAP 2019](http://www.cs.put.poznan.pl/events/DOLAP2019.html)) collocated with [EDBT/ICDT](http://edbticdt2019.inesc-id.pt/?main) joint conference.
 
 # Experiments short description
 
@@ -8,7 +8,7 @@ This page contain additional details about the experimental setup and results di
 
 # Pipeline prototype and configuration
 
-The configuration space for the pipeline is composed of three oprations. For each operations there are 4, 5 and 4 possible operators.
+The configuration space for the pipeline is composed of three operations. For each operations there are 4, 5 and 4 possible operators.
 Each operator has between 0 and 3 specific parameter(s). For each parameter, there is between 2 and 4 possible values. The final pipeline configuration space has a total of **4750** possible configurations.
 
 ## Pipeline prototype
@@ -69,6 +69,6 @@ The results are sorted by dataset.
 
 # References
 
-[1]	I. Mani, I. Zhang. “kNN approach to unbalanced data distributions: a case study involving information extraction,” In Proceedings of workshop on learning from imbalanced datasets, 2003.
-[2]	P. Hart, “The condensed nearest neighbor rule,” In Information Theory, IEEE Transactions on, vol. 14(3), pp. 515-516, 1968.
-[3]	N. V. Chawla, K. W. Bowyer, L. O.Hall, W. P. Kegelmeyer, “SMOTE: synthetic minority over-sampling technique,” Journal of artificial intelligence research, 321-357, 2002.
+[1]	I. Mani, I. Zhang. “kNN approach to unbalanced data distributions: a case study involving information extraction,” In Proceedings of workshop on learning from imbalanced datasets, 2003.    
+[2]	P. Hart, “The condensed nearest neighbor rule,” In Information Theory, IEEE Transactions on, vol. 14(3), pp. 515-516, 1968.    
+[3]	N. V. Chawla, K. W. Bowyer, L. O.Hall, W. P. Kegelmeyer, “SMOTE: synthetic minority over-sampling technique,” Journal of artificial intelligence research, 321-357, 2002.    
