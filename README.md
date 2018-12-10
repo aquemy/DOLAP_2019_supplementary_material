@@ -122,8 +122,12 @@ The results are sorted by dataset.
 
 ## Iris dataset
 
-![Configuration density depending on accuracy- Random Forest](/images/distribution_Iris_RandomForest.png)
+![Configuration density depending on accuracy - Random Forest](/images/distribution_Iris_RandomForest.png)
 ![SMBO results - Random Forest](/images/histogram_Iris_RandomForest.png)
+
+![Configuration density depending on accuracy - SVM](/images/distribution_Iris_SVM.png)
+![SMBO results - SVM](/images/histogram_Iris_SVM.png)
+
 
 ## Wine dataset
 
