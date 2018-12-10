@@ -86,7 +86,26 @@ Implementation: [sklearn.pipeline.FeatureUnion](https://scikit-learn.org/stable/
 
 ## Pipeline operator specific configuration
 
-
+- ```NearMiss```: 
+	- ```n_neighbors```: [1,2,3]
+- ```CondensedNearestNeighbour```:
+	- ```n_neighbors```: [1,2,3]
+- ```SMOTE```: 
+	- ```k_neighbors```: [5,6,7]
+- ```StandardScaler```: 
+	- ```with_mean```: [True, False]
+	- ```with_std```: [True, False]
+- ```RobustScaler```: 
+	- ```quantile_range```:[(25.0, 75.0),(10.0, 90.0), (5.0, 95.0)]
+	- ```with_centering```: [True, False]
+    - ```with_scaling```: [True, False]
+- ```PCA```: 
+	- ```n_components```: [1,2,3,4]
+- ```SelectKBest```: 
+	- ```k```: [1,2,3,4]
+- ```PCA+SelectKBest```: 
+	- ```n_components```: [1,2,3,4] 
+	- ```k```:[1,2,3,4] 
 
 # Results
 
