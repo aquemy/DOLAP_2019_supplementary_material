@@ -64,16 +64,23 @@ Implementation: [imblearn.over_sampling.SMOTE](https://imbalanced-learn.readthed
 
 For the step **normalizer**, the possible methods to instanciate are:
 - ```None```: no normalization.
-- ```StandardScaler```: 
-- ```PowerTransform```: 
-- ```MinMaxScaler```: 
-- ```RobustScaler```: 
+- ```StandardScaler```: Standardize features by removing the mean and scaling to unit variance.     
+Implementation: [sklearn.preprocessing.StandardScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html#sklearn-preprocessing-standardscaler)
+- ```PowerTransform```: Apply a Yeo-Johnson transformation to make data more Gaussian-like.     
+Implementation: [sklearn.preprocessing.PowerTransformer](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PowerTransformer.html#sklearn-preprocessing-powertransformer)
+- ```MinMaxScaler```: Transforms features by scaling each feature to [0,1].    
+Implementation: [sklearn.preprocessing.MinMaxScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html#sklearn-preprocessing-minmaxscaler)
+- ```RobustScaler```: Same as StandardScaler but remove points outside a range of percentile.    
+Implementation: [sklearn.preprocessing.RobustScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.RobustScaler.html#sklearn-preprocessing-robustscaler)
 
 For the step **features**, the possible methods to instanciate are:
 - ```None```: no feature transformation.
-- ```PCA```: Principal Component Analysis
-- ```SelectKBest```: Selecting the k most informative features according to ANOVA and Fisher score
-- ```PCA+SelectKBest```: Union of features obtaines by PCA and SelectKBest.
+- ```PCA```: Keep the k main axis of a Principal Component Analysis.    
+Implementation: [sklearn.decomposition.PCA](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html#sklearn-decomposition-pca)
+- ```SelectKBest```: Selecting the k most informative features according to ANOVA and F-score.     
+Implementation: [sklearn.feature_selection.SelectKBest](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectKBest.html#sklearn-feature-selection-selectkbest)
+- ```PCA+SelectKBest```: Union of features obtaines by PCA and SelectKBest.     
+Implementation: [sklearn.pipeline.FeatureUnion](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.FeatureUnion.html#sklearn-pipeline-featureunion)
 
 **REMARK:** The baseline pipeline corresponds to the triple ```(None, None, None)```.
 
