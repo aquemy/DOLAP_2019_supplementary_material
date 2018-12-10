@@ -50,6 +50,8 @@ The pipeline *prototype* is composed of three sequential operations:
 2. **normalizer:** to normalize or scale features.
 3. **features:** to select the most important features or reduce the input vector space dimension.
 
+![Pipeline illustration](/pipeline.png)
+
 ## Pipeline operators
 
 For the step **rebalance**, the possible methods to instanciate are:
