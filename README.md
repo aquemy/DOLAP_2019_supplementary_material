@@ -144,6 +144,8 @@ The results are sorted by dataset.
 ![Configuration density depending on accuracy - Random Forest](/images/distribution_Wine_RandomForest.png)
 ![SMBO results - Random Forest](/images/histogram_Wine_RandomForest.png)
 
+![Configuration density depending on accuracy - Decision Tree](/images/distribution_Wine_DecisionTree.png)
+![SMBO results - Decision Tree](/images/histogram_Wine_DecisionTree.png)
 
 # References
 
