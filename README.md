@@ -120,6 +120,10 @@ The results are sorted by dataset.
 ![Configuration density depending on accuracy - Random Forest](/images/distribution_Breast_RandomForest.png)
 ![SMBO results - Random Forest](/images/histogram_Breast_RandomForest.png)
 
+![Configuration density depending on accuracy - Decision Tree](/images/distribution_Breast_DecisionTree.png)
+![SMBO results - Decision Tree](/images/histogram_Breast_DecisionTree.png)
+
+
 ## Iris dataset
 
 ![Configuration density depending on accuracy - Random Forest](/images/distribution_Iris_RandomForest.png)
