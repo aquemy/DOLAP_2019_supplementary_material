@@ -125,6 +125,9 @@ The results are sorted by dataset.
 ![Configuration density depending on accuracy - Random Forest](/images/distribution_Iris_RandomForest.png)
 ![SMBO results - Random Forest](/images/histogram_Iris_RandomForest.png)
 
+![Configuration density depending on accuracy - Decision Tree](/images/distribution_Iris_DecisionTree.png)
+![SMBO results - Decision Tree](/images/histogram_Iris_DecisionTree.png)
+
 ![Configuration density depending on accuracy - Neural Net](/images/distribution_Iris_NeuralNet.png)
 ![SMBO results - Neural Net](/images/histogram_Iris_NeuralNet.png)
 
