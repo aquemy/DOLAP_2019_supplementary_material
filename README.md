@@ -147,6 +147,9 @@ The results are sorted by dataset.
 ![Configuration density depending on accuracy - Decision Tree](/images/distribution_Wine_DecisionTree.png)
 ![SMBO results - Decision Tree](/images/histogram_Wine_DecisionTree.png)
 
+![Configuration density depending on accuracy - Neural Net](/images/distribution_Wine_NeuralNet.png)
+![SMBO results - Neural Net](/images/histogram_Wine_NeuralNet.png)
+
 # References
 
 [1]	I. Mani, I. Zhang. “kNN approach to unbalanced data distributions: a case study involving information extraction,” In Proceedings of workshop on learning from imbalanced datasets, 2003.    
