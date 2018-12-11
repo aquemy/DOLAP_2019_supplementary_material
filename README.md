@@ -123,6 +123,8 @@ The results are sorted by dataset.
 ![Configuration density depending on accuracy - Decision Tree](/images/distribution_Breast_DecisionTree.png)
 ![SMBO results - Decision Tree](/images/histogram_Breast_DecisionTree.png)
 
+![Configuration density depending on accuracy - Neural Net](/images/distribution_Breast_NeuralNet.png)
+![SMBO results - Neural Net](/images/histogram_Breast_NeuralNet.png)
 
 ## Iris dataset
 
