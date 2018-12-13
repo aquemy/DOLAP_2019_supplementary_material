@@ -126,6 +126,10 @@ The results are sorted by dataset.
 ![Configuration density depending on accuracy - Neural Net](/images/distribution_Breast_NeuralNet.png)
 ![SMBO results - Neural Net](/images/histogram_Breast_NeuralNet.png)
 
+![Configuration density depending on accuracy - SVM](/images/distribution_Breast_SVM.png)
+![SMBO results - SVM](/images/histogram_Breast_SVM.png)
+
+
 ## Iris dataset
 
 ![Configuration density depending on accuracy - Random Forest](/images/distribution_Iris_RandomForest.png)
