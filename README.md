@@ -14,6 +14,7 @@ This page contains additional details about the experimental setup and results d
 	1. [Detailed experimental protocol](#details-experimental-protocol-1)
 	2. [Measures and analysis](#measures-and-analysis-1)
 	3. [Results](#results-1)
+	4. [NMAD Calculation](#nmad-calculation)
 
 # Experiments short description
 
@@ -277,6 +278,33 @@ The results are sorted by dataset.
 <figcaption>Heatmap of the accuracy depending on the configuration - SVM</figcaption>
 </figure>
 
+### Newsgroup dataset
+
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/heatmap_News_RandomForest.png" width="50%" />
+<figcaption>Heatmap of the accuracy depending on the configuration - Random Forest</figcaption>
+</figure>
+
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/heatmap_News_DecisionTree.png" width="50%" />
+<figcaption>Heatmap of the accuracy depending on the configuration - Decision Tree</figcaption>
+</figure>
+
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/heatmap_News_NeuralNet.png" width="50%" />
+<figcaption>Heatmap of the accuracy depending on the configuration - Neural Net</figcaption>
+</figure>
+
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/heatmap_News_SVM.png" width="50%" />
+<figcaption>Heatmap of the accuracy depending on the configuration - SVM</figcaption>
+</figure>
+
+## NMAD calculation
+
+### ECHR
+
+
 | Method | ![](https://latex.codecogs.com/gif.latex?(n,k))  |
 |---|---|
 | Decision Tree | ![](https://latex.codecogs.com/gif.latex?p_1=(1,0.5)) |
@@ -301,27 +329,9 @@ The results are sorted by dataset.
 | ![](https://latex.codecogs.com/gif.latex?(3,50000)) | 0.175 |
 | ![](https://latex.codecogs.com/gif.latex?(4,50000)) | 0.094 |
 
-### Newsgroup dataset
 
-<figure>
-<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/heatmap_News_RandomForest.png" width="50%" />
-<figcaption>Heatmap of the accuracy depending on the configuration - Random Forest</figcaption>
-</figure>
+### Newsgroup
 
-<figure>
-<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/heatmap_News_DecisionTree.png" width="50%" />
-<figcaption>Heatmap of the accuracy depending on the configuration - Decision Tree</figcaption>
-</figure>
-
-<figure>
-<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/heatmap_News_NeuralNet.png" width="50%" />
-<figcaption>Heatmap of the accuracy depending on the configuration - Neural Net</figcaption>
-</figure>
-
-<figure>
-<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/heatmap_News_SVM.png" width="50%" />
-<figcaption>Heatmap of the accuracy depending on the configuration - SVM</figcaption>
-</figure>
 
 | Method | ![](https://latex.codecogs.com/gif.latex?(n,k))  |
 |---|---|
@@ -344,6 +354,8 @@ The results are sorted by dataset.
 | ![](https://latex.codecogs.com/gif.latex?(5,50000)) | 0.356 |
 | ![](https://latex.codecogs.com/gif.latex?(3,10000)) | 0.294 |
 | ![](https://latex.codecogs.com/gif.latex?(2,100000)) | 0.362 |
+
+
 
 # References
 
