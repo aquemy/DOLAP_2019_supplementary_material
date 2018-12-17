@@ -166,6 +166,24 @@ The results are sorted by dataset.
 
 # Exeperiment 2: Algorithm-specific Configuration
 
+## Results
+
+
+### ECHR dataset
+
+![Heatmap of the accuracy depending on the configuration - Random Forest](/images/heatmap_ECHR_RandomForest.png)
+![Heatmap of the accuracy depending on the configuration - Decision Tree](/images/heatmap_ECHR_DecisionTree.png)
+![Heatmap of the accuracy depending on the configuration - Neural Net](/images/heatmap_ECHR_NeuralNet.png)
+![Heatmap of the accuracy depending on the configuration - SVM](/images/heatmap_ECHR_SVM.png)
+
+### Newsgroup dataset
+
+![Heatmap of the accuracy depending on the configuration - Random Forest](/images/heatmap_News_RandomForest.png)
+![Heatmap of the accuracy depending on the configuration - Decision Tree](/images/heatmap_News_DecisionTree.png)
+![Heatmap of the accuracy depending on the configuration - Neural Net](/images/heatmap_News_NeuralNet.png)
+![Heatmap of the accuracy depending on the configuration - SVM](/images/heatmap_News_SVM.png)
+
+
 # References
 
 [1]	I. Mani, I. Zhang. “kNN approach to unbalanced data distributions: a case study involving information extraction,” In Proceedings of workshop on learning from imbalanced datasets, 2003.    
