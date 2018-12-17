@@ -2,14 +2,27 @@
 
 This page contains additional details about the experimental setup and results discussed in the paper *Data Pipeline Selection and Optimization* submitted for the 21st International Workshop On Design, Optimization, Languages and Analytical Processing of Big Data ([DOLAP 2019](http://www.cs.put.poznan.pl/events/DOLAP2019.html)) collocated with [EDBT/ICDT](http://edbticdt2019.inesc-id.pt/?main) joint conference.
 
+
+**Table of Content:**   
+
+1. [Experiments short description](#experiments-short-description)
+2. [Experiment 1: SMBO for DPSO](#experiment-1-smbo-for-dpso)
+	1. [Detailed experimental protocol](#details-experimental-protocol)
+	2. [Measures and analysis](#measures-and-analysis)
+	3. [Results](#results)
+3. [Experiment 2: Algorithm-specific Configuration](#experiment-2-algorithm-specific-configuration)
+	1. [Detailed experimental protocol](#details-experimental-protocol-1)
+	2. [Measures and analysis](#measures-and-analysis-1)
+	3. [Results](#results-1)
+
 # Experiments short description
 
 The paper contains two experiments:
 
-1. Study of Sequential Model Based Optimizatoin (SMBO) to the Data Pipeline selection and configuration. 
+1. Study of Sequential Model Based Optimizatoin (SMBO) to the Data Pipeline Selection and Optimization. 
 2. Study of if an optimal pipeline configuration is specific to an algorithm or general to the dataset.
 
-# Experiment 1: Sequential Model Based Optimization for Data Pipeline selection
+# Experiment 1: SMBO for DPSO
 ## Detailed experimental protocol
 
 - **Datasets:** [Breast](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html), [Iris](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html), [Wine](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html).
@@ -56,7 +69,10 @@ The pipeline *prototype* is composed of three sequential operations:
 2. **normalizer:** to normalize or scale features.
 3. **features:** to select the most important features or reduce the input vector space dimension.
 
-![Pipeline illustration](/pipeline.png)
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/pipeline.png" width="75%"  style="display:block;text-align:center"/>
+<figcaption>Pipeline illustration</figcaption>
+</figure>
 
 ### Pipeline operators
 
@@ -121,68 +137,213 @@ The results are sorted by dataset.
 
 ### Breast dataset 
 
-![Configuration density depending on accuracy - Random Forest](/images/distribution_Breast_RandomForest.png)
-![SMBO results - Random Forest](/images/histogram_Breast_RandomForest.png)
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/distribution_Breast_RandomForest.png" width="50%" />
+<figcaption>Configuration density depending on accuracy - Random Forest</figcaption>
+</figure>
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/histogram_Breast_RandomForest.png" width="50%" />
+<figcaption>SMBO results - Random Forest</figcaption>
+</figure>
 
-![Configuration density depending on accuracy - Decision Tree](/images/distribution_Breast_DecisionTree.png)
-![SMBO results - Decision Tree](/images/histogram_Breast_DecisionTree.png)
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/distribution_Breast_DecisionTree.png" width="50%" />
+<figcaption>Configuration density depending on accuracy - Decision Tree</figcaption>
+</figure>
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/histogram_Breast_DecisionTree.png" width="50%" />
+<figcaption>SMBO results - Decision Tree</figcaption>
+</figure>
 
-![Configuration density depending on accuracy - Neural Net](/images/distribution_Breast_NeuralNet.png)
-![SMBO results - Neural Net](/images/histogram_Breast_NeuralNet.png)
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/distribution_Breast_NeuralNet.png" width="50%" />
+<figcaption>Configuration density depending on accuracy - Neural Net</figcaption>
+</figure>
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/histogram_Breast_NeuralNet.png" width="50%" />
+<figcaption>SMBO results - Neural Net</figcaption>
+</figure>
 
-![Configuration density depending on accuracy - SVM](/images/distribution_Breast_SVM.png)
-![SMBO results - SVM](/images/histogram_Breast_SVM.png)
-
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/distribution_Breast_SVM.png" width="50%" />
+<figcaption>Configuration density depending on accuracy - SVM</figcaption>
+</figure>
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/histogram_Breast_SVM.png" width="50%" />
+<figcaption>SMBO results - SVM</figcaption>
+</figure>
 
 ### Iris dataset
 
-![Configuration density depending on accuracy - Random Forest](/images/distribution_Iris_RandomForest.png)
-![SMBO results - Random Forest](/images/histogram_Iris_RandomForest.png)
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/distribution_Iris_RandomForest.png" width="50%" />
+<figcaption>Configuration density depending on accuracy - Random Forest</figcaption>
+</figure>
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/histogram_Iris_RandomForest.png" width="50%" />
+<figcaption>SMBO results - Random Forest</figcaption>
+</figure>
 
-![Configuration density depending on accuracy - Decision Tree](/images/distribution_Iris_DecisionTree.png)
-![SMBO results - Decision Tree](/images/histogram_Iris_DecisionTree.png)
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/distribution_Iris_DecisionTree.png" width="50%" />
+<figcaption>Configuration density depending on accuracy - Decision Tree</figcaption>
+</figure>
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/histogram_Iris_DecisionTree.png" width="50%" />
+<figcaption>SMBO results - Decision Tree</figcaption>
+</figure>
 
-![Configuration density depending on accuracy - Neural Net](/images/distribution_Iris_NeuralNet.png)
-![SMBO results - Neural Net](/images/histogram_Iris_NeuralNet.png)
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/distribution_Iris_NeuralNet.png" width="50%" />
+<figcaption>Configuration density depending on accuracy - Neural Net</figcaption>
+</figure>
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/histogram_Iris_NeuralNet.png" width="50%" />
+<figcaption>SMBO results - Neural Net</figcaption>
+</figure>
 
-![Configuration density depending on accuracy - SVM](/images/distribution_Iris_SVM.png)
-![SMBO results - SVM](/images/histogram_Iris_SVM.png)
-
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/distribution_Iris_SVM.png" width="50%" />
+<figcaption>Configuration density depending on accuracy - SVM</figcaption>
+</figure>
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/histogram_Iris_SVM.png" width="50%" />
+<figcaption>SMBO results - SVM</figcaption>
+</figure>
 
 ### Wine dataset
 
-![Configuration density depending on accuracy - Random Forest](/images/distribution_Wine_RandomForest.png)
-![SMBO results - Random Forest](/images/histogram_Wine_RandomForest.png)
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/distribution_Wine_RandomForest.png" width="50%" />
+<figcaption>Configuration density depending on accuracy - Random Forest</figcaption>
+</figure>
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/histogram_Wine_RandomForest.png" width="50%" />
+<figcaption>SMBO results - Random Forest</figcaption>
+</figure>
 
-![Configuration density depending on accuracy - Decision Tree](/images/distribution_Wine_DecisionTree.png)
-![SMBO results - Decision Tree](/images/histogram_Wine_DecisionTree.png)
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/distribution_Wine_DecisionTree.png" width="50%" />
+<figcaption>Configuration density depending on accuracy - Decision Tree</figcaption>
+</figure>
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/histogram_Wine_DecisionTree.png" width="50%" />
+<figcaption>SMBO results - Decision Tree</figcaption>
+</figure>
 
-![Configuration density depending on accuracy - Neural Net](/images/distribution_Wine_NeuralNet.png)
-![SMBO results - Neural Net](/images/histogram_Wine_NeuralNet.png)
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/distribution_Wine_NeuralNet.png" width="50%" />
+<figcaption>Configuration density depending on accuracy - Neural Net</figcaption>
+</figure>
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/histogram_Wine_NeuralNet.png" width="50%" />
+<figcaption>SMBO results - Neural Net</figcaption>
+</figure>
 
-![Configuration density depending on accuracy - SVM](/images/distribution_Wine_SVM.png)
-![SMBO results - SVM](/images/histogram_Wine_SVM.png)
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/distribution_Wine_SVM.png" width="50%" />
+<figcaption>Configuration density depending on accuracy - SVM</figcaption>
+</figure>
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/histogram_Wine_SVM.png" width="50%" />
+<figcaption>SMBO results - SVM</figcaption>
+</figure>
 
+# Experiment 2: Algorithm-specific Configuration
 
-# Exeperiment 2: Algorithm-specific Configuration
+## Detailed experimental protocol
 
 ## Results
 
-
 ### ECHR dataset
 
-![Heatmap of the accuracy depending on the configuration - Random Forest](/images/heatmap_ECHR_RandomForest.png)
-![Heatmap of the accuracy depending on the configuration - Decision Tree](/images/heatmap_ECHR_DecisionTree.png)
-![Heatmap of the accuracy depending on the configuration - Neural Net](/images/heatmap_ECHR_NeuralNet.png)
-![Heatmap of the accuracy depending on the configuration - SVM](/images/heatmap_ECHR_SVM.png)
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/heatmap_ECHR_RandomForest.png" width="50%" />
+<figcaption>Heatmap of the accuracy depending on the configuration - Random Forest</figcaption>
+</figure>
+
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/heatmap_ECHR_DecisionTree.png" width="50%" />
+<figcaption>Heatmap of the accuracy depending on the configuration - Decision Tree</figcaption>
+</figure>
+
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/heatmap_ECHR_NeuralNet.png" width="50%" />
+<figcaption>Heatmap of the accuracy depending on the configuration - Neural Net</figcaption>
+</figure>
+
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/heatmap_ECHR_SVM.png" width="50%" />
+<figcaption>Heatmap of the accuracy depending on the configuration - SVM</figcaption>
+</figure>
+
+| Method | ![](https://latex.codecogs.com/gif.latex?(n,k))  |
+|---|---|
+| Decision Tree | ![](https://latex.codecogs.com/gif.latex?p_1=(1,0.5)) |
+| Neural Network | ![](https://latex.codecogs.com/gif.latex?p_2=(1,0.5)) |
+| Random Forest | ![](https://latex.codecogs.com/gif.latex?p_3=(0.5,0.1)), ![](https://latex.codecogs.com/gif.latex?p_4=(0.75,0.1)), ![](https://latex.codecogs.com/gif.latex?p_5=(1,0.5)) |
+| Linear SVM | ![](https://latex.codecogs.com/gif.latex?p_6=(0.5,0.5)), ![](https://latex.codecogs.com/gif.latex?p_7=(0.75,0.5)), ![](https://latex.codecogs.com/gif.latex?p_8=(1,0.5)) |
+
+
+| Sample ECHR |
+|---|
+| ![](https://latex.codecogs.com/gif.latex?S(p_1)=S(p_2)=S(p_5)=S(p_8)=\\{&space;p_1,&space;p_2,&space;p_5,&space;p_8&space;\\}) |
+| ![](https://latex.codecogs.com/gif.latex?S(p_3)=&space;\\{&space;p_1,&space;p_2,&space;p_3,&space;p_6&space;\\}) |
+| ![](https://latex.codecogs.com/gif.latex?S(p_4)=&space;\\{&space;p_1,&space;p_2,&space;p_4,&space;p_7&space;\\}) |
+| ![](https://latex.codecogs.com/gif.latex?S(p_6)=&space;\\{&space;p_1,&space;p_2,&space;p_3,&space;p_6&space;\\}) |
+| ![](https://latex.codecogs.com/gif.latex?S(p_7)=&space;\\{&space;p_1,&space;p_2,&space;p_5,&space;p_7&space;\\}) |
+
+| Point | NMAD |
+|---|---|
+| ![](https://latex.codecogs.com/gif.latex?(5,50000)) | 0 |
+| ![](https://latex.codecogs.com/gif.latex?(3,10000)) | 0.275 |
+| ![](https://latex.codecogs.com/gif.latex?(4,10000)) | 0.213 |
+| ![](https://latex.codecogs.com/gif.latex?(3,50000)) | 0.175 |
+| ![](https://latex.codecogs.com/gif.latex?(4,50000)) | 0.094 |
 
 ### Newsgroup dataset
 
-![Heatmap of the accuracy depending on the configuration - Random Forest](/images/heatmap_News_RandomForest.png)
-![Heatmap of the accuracy depending on the configuration - Decision Tree](/images/heatmap_News_DecisionTree.png)
-![Heatmap of the accuracy depending on the configuration - Neural Net](/images/heatmap_News_NeuralNet.png)
-![Heatmap of the accuracy depending on the configuration - SVM](/images/heatmap_News_SVM.png)
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/heatmap_News_RandomForest.png" width="50%" />
+<figcaption>Heatmap of the accuracy depending on the configuration - Random Forest</figcaption>
+</figure>
 
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/heatmap_News_DecisionTree.png" width="50%" />
+<figcaption>Heatmap of the accuracy depending on the configuration - Decision Tree</figcaption>
+</figure>
+
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/heatmap_News_NeuralNet.png" width="50%" />
+<figcaption>Heatmap of the accuracy depending on the configuration - Neural Net</figcaption>
+</figure>
+
+<figure>
+<img src="https://aquemy.github.io/DOLAP_2019_supplementary_material/images/heatmap_News_SVM.png" width="50%" />
+<figcaption>Heatmap of the accuracy depending on the configuration - SVM</figcaption>
+</figure>
+
+| Method | ![](https://latex.codecogs.com/gif.latex?(n,k))  |
+|---|---|
+| Decision Tree | ![](https://latex.codecogs.com/gif.latex?p_1=(0.75,0.05)), ![](https://latex.codecogs.com/gif.latex?p_2=(0.75,1.0)) |
+| Neural Network | ![](https://latex.codecogs.com/gif.latex?p_3=(1.0,0.50)) |
+| Random Forest | ![](https://latex.codecogs.com/gif.latex?p_4=(0.5,0.10)) |
+| Linear SVM | ![](https://latex.codecogs.com/gif.latex?p_5=(0.25,1.0)) |
+
+
+| Sample Newsgroup |
+|---|
+| ![](https://latex.codecogs.com/gif.latex?S(p_1)=S(p_4)=\\{p_1,p_3,p_4,p_5\\}) |
+| ![](https://latex.codecogs.com/gif.latex?S(p_2)=S(p_3)=S(p_5)=\\{p_2,p_3,p_4,p_5\\}) |
+
+
+| Point | NMAD |
+|---|---|
+| ![](https://latex.codecogs.com/gif.latex?(4,5000)) | 0.306 |
+| ![](https://latex.codecogs.com/gif.latex?(4,100000)) | 0.300 |
+| ![](https://latex.codecogs.com/gif.latex?(5,50000)) | 0.356 |
+| ![](https://latex.codecogs.com/gif.latex?(3,10000)) | 0.294 |
+| ![](https://latex.codecogs.com/gif.latex?(2,100000)) | 0.362 |
 
 # References
 
