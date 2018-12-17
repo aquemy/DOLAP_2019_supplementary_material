@@ -1,28 +1,34 @@
 # Supplementary material description
 
-This page contain additional details about the experimental setup and results discussed in the paper *Data Pipeline Hyperparameter Optimization* submitted for the 21st International Workshop On Design, Optimization, Languages and Analytical Processing of Big Data ([DOLAP 2019](http://www.cs.put.poznan.pl/events/DOLAP2019.html)) collocated with [EDBT/ICDT](http://edbticdt2019.inesc-id.pt/?main) joint conference.
+This page contains additional details about the experimental setup and results discussed in the paper *Data Pipeline Selection and Optimization* submitted for the 21st International Workshop On Design, Optimization, Languages and Analytical Processing of Big Data ([DOLAP 2019](http://www.cs.put.poznan.pl/events/DOLAP2019.html)) collocated with [EDBT/ICDT](http://edbticdt2019.inesc-id.pt/?main) joint conference.
 
 # Experiments short description
 
-# Detailed experimental protocol
+The paper contains two experiments:
 
-- **Datasets:** Adult, Breast, Iris, Wine.
-- **Methods:** SVM, Random Forest, Neural Network, Decision Tree.
+1. Study of Sequential Model Based Optimizatoin (SMBO) to the Data Pipeline selection and configuration. 
+2. Study of if an optimal pipeline configuration is specific to an algorithm or general to the dataset.
+
+# Experiment 1: Sequential Model Based Optimization for Data Pipeline selection
+## Detailed experimental protocol
+
+- **Datasets:** [Breast](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html), [Iris](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html), [Wine](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html).
+- **Methods:** [SVM](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html), [Random Forest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html), [Neural Network](https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html), [Decision Tree](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html).
 - **Dataset split:** 60% for training set, 40% for test set.
 - **Pipeline configuration space size:** 4750 configurations.
 
 For each dataset, there is a *baseline* pipeline consisting in not doing any preprocessing.
 
-## Step 1
+### Step 1
 
 For each dataset and method, we performed an exhaustive search on the configuration space defined in details right after.
 For each of the **4750** configurations, a **10-fold cross-validation** has been performed and the score measure is the **accuracy**.
 
-## Step 2
+### Step 2
 
 For each dataset and method, we performed a search using Sequential Model-Based Optimization (implementation provided by ```hyperopt```) and a budget of **100** configurations to visit (about 2% of the whole configuration space). As for Step 1., we measure the **accuracy** obtained over a **10-fold cross-validation**.
 
-## Measures and analysis
+### Measures and analysis
 
 We want:
 
@@ -37,12 +43,12 @@ To answer those questions, we generate two kind of plots:
 1. **Density of the configuration depending on the accuracy for the exhaustive grid, and for the SMBO search.** If the density is not null for accuracy higher than the baseline score, then, there exist configurations that improve the baseline score (answer to **Q1**). We can observe the probability to improve the baseline score (and quantify how much) by observing the proportion of the area after the baseline score vertical marker (answer to **Q2**). Similarely, if the density for SMBO has some support higher than the baseline score, it means SMBO search could improve (answer to **Q3**). If the area above the baseline score vertical marker is larger for SMBO than for the exhaustive search, then SMBO is more likely to improve the baseline than an exhaustive search (answer to **Q4**).
 2. **Evolution of score obtained configuration after configuration for SMBO search.** The *improvement interval* is comprised between the baseline score and the best score obtained by the exhaustive search. To answer **Q5**, we plot horizontally the improvement interval, and plot the best score obtained iteration after iteration. SMBO improved the baseline as soon as the best score enters the improvement interval. To help visualization, we plot veritically the number of configurations needed to enter the interval and the number of configurations to visit before reaching the best score obtained over the budget of 100 configurations. For both market, the lower the better.
 
-# Pipeline prototype and configuration
+## Pipeline prototype and configuration
 
 The configuration space for the pipeline is composed of three operations. For each operations there are 4, 5 and 4 possible operators.
 Each operator has between 0 and 3 specific parameter(s). For each parameter, there is between 2 and 4 possible values. The final pipeline configuration space has a total of **4750** possible configurations.
 
-## Pipeline prototype
+### Pipeline prototype
 
 The pipeline *prototype* is composed of three sequential operations:
 
@@ -52,7 +58,7 @@ The pipeline *prototype* is composed of three sequential operations:
 
 ![Pipeline illustration](/pipeline.png)
 
-## Pipeline operators
+### Pipeline operators
 
 For the step **rebalance**, the possible methods to instanciate are:
 
@@ -86,7 +92,7 @@ Implementation: [sklearn.pipeline.FeatureUnion](https://scikit-learn.org/stable/
 
 **REMARK:** The baseline pipeline corresponds to the triple ```(None, None, None)```.
 
-## Pipeline operator specific configuration
+### Pipeline operator specific configuration
 
 - ```NearMiss```: 
 	- ```n_neighbors```: [1,2,3]
@@ -109,13 +115,11 @@ Implementation: [sklearn.pipeline.FeatureUnion](https://scikit-learn.org/stable/
 	- ```n_components```: [1,2,3,4] 
 	- ```k```:[1,2,3,4] 
 
-# Results
+## Results
 
 The results are sorted by dataset.
 
-## Adult dataset
-
-## Breast dataset 
+### Breast dataset 
 
 ![Configuration density depending on accuracy - Random Forest](/images/distribution_Breast_RandomForest.png)
 ![SMBO results - Random Forest](/images/histogram_Breast_RandomForest.png)
@@ -130,7 +134,7 @@ The results are sorted by dataset.
 ![SMBO results - SVM](/images/histogram_Breast_SVM.png)
 
 
-## Iris dataset
+### Iris dataset
 
 ![Configuration density depending on accuracy - Random Forest](/images/distribution_Iris_RandomForest.png)
 ![SMBO results - Random Forest](/images/histogram_Iris_RandomForest.png)
@@ -145,7 +149,7 @@ The results are sorted by dataset.
 ![SMBO results - SVM](/images/histogram_Iris_SVM.png)
 
 
-## Wine dataset
+### Wine dataset
 
 ![Configuration density depending on accuracy - Random Forest](/images/distribution_Wine_RandomForest.png)
 ![SMBO results - Random Forest](/images/histogram_Wine_RandomForest.png)
@@ -158,6 +162,9 @@ The results are sorted by dataset.
 
 ![Configuration density depending on accuracy - SVM](/images/distribution_Wine_SVM.png)
 ![SMBO results - SVM](/images/histogram_Wine_SVM.png)
+
+
+# Exeperiment 2: Algorithm-specific Configuration
 
 # References
 
